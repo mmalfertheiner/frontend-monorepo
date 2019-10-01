@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { Button } from 'ui'
+import { Button, Text } from 'ui'
 
 import Nav from '../components/nav'
 
@@ -16,6 +16,7 @@ const Home = () => (
     <div className='hero'>
       <h1 className='title'>Welcome to Next.js!</h1>
       <Button>This is a test</Button>
+      <Text text="Test"></Text>
       <p className='description'>
         To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
