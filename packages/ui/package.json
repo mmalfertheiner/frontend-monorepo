@@ -2,9 +2,10 @@
   "name": "ui",
   "version": "1.0.0",
   "description": "Shared React UI components",
-  "main": "index.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
+    "build": "babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -14,7 +15,10 @@
     "react-dom": "~16.10.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.6.2",
     "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
     "@storybook/addon-actions": "^5.2.1",
     "@storybook/addon-links": "^5.2.1",
     "@storybook/addons": "^5.2.1",
