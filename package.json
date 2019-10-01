@@ -1,4 +1,15 @@
 {
     "private": true,
-    "workspaces": ["packages/*"]
+    "scripts": {
+        "front-office": "yarn workspace front-office dev",
+        "back-office": "yarn workspace back-office dev",
+        "watch:ui": "yarn workspace ui watch",
+        "dev:front-office": "concurrently --kill-others-on-fail \"yarn front-office\"  \"yarn watch:ui\""
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "devDependencies": {
+        "concurrently": "^4.1.2"
+    }
 }
