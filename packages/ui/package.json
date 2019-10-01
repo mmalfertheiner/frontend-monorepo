@@ -2,10 +2,10 @@
   "name": "ui",
   "version": "1.0.0",
   "description": "Shared React UI components",
-  "main": "lib/index.js",
+  "module": "es/index.js",
   "license": "MIT",
   "scripts": {
-    "build": "babel --root-mode upward src -d lib --ignore **/*.story.js,**/*.spec.js",
+    "build": "babel --root-mode upward src -d es --ignore **/*.story.js,**/*.spec.js",
     "watch": "yarn build --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
