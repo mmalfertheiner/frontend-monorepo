@@ -4,7 +4,8 @@
         "front-office": "yarn workspace front-office dev",
         "back-office": "yarn workspace back-office dev",
         "watch:ui": "yarn workspace ui watch",
-        "dev:front-office": "concurrently --kill-others-on-fail \"yarn front-office\"  \"yarn watch:ui\""
+        "dev:front-office": "concurrently --kill-others-on-fail \"yarn front-office\"  \"yarn watch:ui\"",
+        "dev:back-office": "concurrently --kill-others-on-fail \"yarn back-office\"  \"yarn watch:ui\""
     },
     "workspaces": [
         "packages/*"
