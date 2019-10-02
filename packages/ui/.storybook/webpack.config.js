@@ -1,7 +1,7 @@
-const path = require('path');
+const path = require("path");
 
 // Export a function. Accept the base config as the only param.
-module.exports = ({ config, mode }) => {
+module.exports = async ({ config, mode }) => {
 
   /* PostCSS Support */
   config.module.rules.push({
@@ -9,7 +9,7 @@ module.exports = ({ config, mode }) => {
     loaders: [
       // Loader for webpack to process CSS with PostCSS
       {
-        loader: 'postcss-loader',
+        loader: "postcss-loader",
         options: {
           /* 
             Enable Source Maps
@@ -19,13 +19,13 @@ module.exports = ({ config, mode }) => {
             Set postcss.config.js config path && ctx 
            */
           config: {
-            path: './.storybook/',
-          },
-        },
-      },
+            path: "./.storybook/"
+          }
+        }
+      }
     ],
 
-    include: path.resolve(__dirname, '../'),
+    include: path.resolve(__dirname, "../")
   });
 
   // Return the altered config

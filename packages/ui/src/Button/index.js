@@ -2,17 +2,11 @@ import React from 'react'
 import styled from '@emotion/styled'
 
 const Button = styled.button`
-padding: 32px;
-background-color: hotpink;
-font-size: 24px;
-border-radius: 4px;
-color: black;
-font-weight: bold;
-&:hover {
-  color: white;
-}
+  &:hover {
+    color: green;
+  }
 `
 
 export default ({children, ...props}) => {
-    return <Button className="m-10" {...props}>{children}</Button>
+    return <Button className="m-10 p-10 rounded bg-teal-300 text-sm text-white hover:bg-teal-500" {...props}>{children}</Button>
 }
