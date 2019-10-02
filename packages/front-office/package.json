@@ -17,6 +17,7 @@
     "@next/bundle-analyzer": "^9.0.7",
     "@zeit/next-css": "^1.0.1",
     "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
     "tailwindcss": "^1.1.2"
   }
 }
