@@ -4,7 +4,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 const Button = styled.button`
   &:hover {
-    color: green;
+    color: white;
   }
 `;
 export default (({
@@ -12,6 +12,6 @@ export default (({
   ...props
 }) => {
   return React.createElement(Button, _extends({
-    className: "m-10 p-10 rounded bg-teal-300 text-sm text-white hover:bg-teal-500"
+    className: "m-10 p-8 rounded bg-teal-300 text-sm text-white hover:bg-teal-500"
   }, props), children);
 });

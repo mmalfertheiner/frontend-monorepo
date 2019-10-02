@@ -1,38 +1,39 @@
-import React from 'react'
-import Head from 'next/head'
-import { Button, Text } from 'ui'
+import React from "react";
+import Head from "next/head";
+import { Button, Text } from "ui";
+import "../style.css";
 
-import Nav from '../components/nav'
+import Nav from "../components/nav";
 
 const Home = () => (
   <div>
     <Head>
       <title>Home</title>
-      <link rel='icon' href='/static/favicon.ico' importance='low' />
+      <link rel="icon" href="/static/favicon.ico" importance="low" />
     </Head>
 
     <Nav />
 
-    <div className='hero'>
-      <h1 className='title'>Welcome to Next.js!</h1>
-      <Button>This is a test</Button>
+    <div className="hero">
+      <h1 className="title">Welcome to Next.js!</h1>
+      <Button>This is a</Button>
       <Text>Test</Text>
-      <p className='description'>
+      <p className="description">
         To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
 
-      <div className='row'>
-        <a href='https://nextjs.org/docs' className='card'>
+      <div className="row">
+        <a href="https://nextjs.org/docs" className="card">
           <h3>Documentation &rarr;</h3>
           <p>Learn more about Next.js in the documentation.</p>
         </a>
-        <a href='https://nextjs.org/learn' className='card'>
+        <a href="https://nextjs.org/learn" className="card">
           <h3>Next.js Learn &rarr;</h3>
           <p>Learn about Next.js by following an interactive tutorial!</p>
         </a>
         <a
-          href='https://github.com/zeit/next.js/tree/master/examples'
-          className='card'
+          href="https://github.com/zeit/next.js/tree/master/examples"
+          className="card"
         >
           <h3>Examples &rarr;</h3>
           <p>Find other example boilerplates on the Next.js GitHub.</p>
@@ -87,6 +88,6 @@ const Home = () => (
       }
     `}</style>
   </div>
-)
+);
 
-export default Home
+export default Home;

@@ -9,7 +9,7 @@
     },
     "workspaces": {
         "packages": ["packages/*"],
-        "nohoist": ["**/tailwindcss", "**/@storybook/**"]
+        "nohoist": ["ui/@storybook"]
     },
     "devDependencies": {
         "concurrently": "^4.1.2"
