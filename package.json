@@ -7,9 +7,10 @@
         "dev:front-office": "concurrently --kill-others-on-fail \"yarn front-office\"  \"yarn watch:ui\"",
         "dev:back-office": "concurrently --kill-others-on-fail \"yarn back-office\"  \"yarn watch:ui\""
     },
-    "workspaces": [
-        "packages/*"
-    ],
+    "workspaces": {
+        "packages": ["packages/*"],
+        "nohoist": ["**/tailwindcss"]
+    },
     "devDependencies": {
         "concurrently": "^4.1.2"
     }

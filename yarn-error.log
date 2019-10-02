@@ -1,0 +1,52 @@
+Arguments: 
+  /usr/local/Cellar/node/12.10.0/bin/node /usr/local/bin/yarn install
+
+PATH: 
+  /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/git/bin:/usr/texbin:.
+
+Yarn version: 
+  1.3.2
+
+Node version: 
+  12.10.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+      "private": true,
+      "scripts": {
+          "front-office": "yarn workspace front-office dev",
+          "back-office": "yarn workspace back-office dev",
+          "watch:ui": "yarn workspace ui watch",
+          "dev:front-office": "concurrently --kill-others-on-fail \"yarn front-office\"  \"yarn watch:ui\"",
+          "dev:back-office": "concurrently --kill-others-on-fail \"yarn back-office\"  \"yarn watch:ui\""
+      },
+      "workspaces": {
+          "packages": ["packages/*"],
+          "nohoist": ["**/tailwindcss"]
+      },
+      "devDependencies": {
+          "concurrently": "^4.1.2"
+      }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  TypeError: patterns.map is not a function
+      at /Users/martinmalfertheiner/.config/yarn/global/node_modules/yarn/lib/cli.js:54024:78
+      at Generator.next (<anonymous>)
+      at step (/Users/martinmalfertheiner/.config/yarn/global/node_modules/yarn/lib/cli.js:92:30)
+      at /Users/martinmalfertheiner/.config/yarn/global/node_modules/yarn/lib/cli.js:110:14
+      at new Promise (<anonymous>)
+      at new F (/Users/martinmalfertheiner/.config/yarn/global/node_modules/yarn/lib/cli.js:29389:28)
+      at /Users/martinmalfertheiner/.config/yarn/global/node_modules/yarn/lib/cli.js:89:12
+      at Config.resolveWorkspaces (/Users/martinmalfertheiner/.config/yarn/global/node_modules/yarn/lib/cli.js:54060:7)
+      at /Users/martinmalfertheiner/.config/yarn/global/node_modules/yarn/lib/cli.js:21998:49
+      at Generator.next (<anonymous>)
