@@ -1,9 +1,25 @@
 import React from "react";
 import Head from "next/head";
 import { Button, Text } from "ui";
+import css from "styled-jsx/css";
+import classnames from "classnames";
+
 import "../style.css";
 
 import Nav from "../components/nav";
+
+const styles = {
+  buttonContainer: css.resolve`
+     {
+      color: green;
+    }
+  `,
+  buttonContent: css.resolve`
+     {
+      color: red;
+    }
+  `
+};
 
 const Home = () => (
   <div>
@@ -16,8 +32,16 @@ const Home = () => (
 
     <div className="hero">
       <h1 className="title">Welcome to Next.js!</h1>
+      <Button
+        classes={{
+          button: classnames(styles.buttonContainer.className, "ml-10"),
+          content: styles.buttonContent.className
+        }}
+      >
+        This is a
+      </Button>
       <Button>This is a</Button>
-      <Text text="Test" className="text-xl" />
+      <Text text="Test" className="hover:text-xl" />
       <p className="description">
         To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
@@ -40,7 +64,9 @@ const Home = () => (
         </a>
       </div>
     </div>
-
+    {Object.keys(styles).map(key => {
+      return React.cloneElement(styles[key].styles, { key });
+    })}
     <style jsx>{`
       .hero {
         width: 100%;

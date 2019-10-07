@@ -1,12 +1,13 @@
-import React from 'react'
-import styled from '@emotion/styled'
+import React from "react";
 
-const Button = styled.button`
-  &:hover {
-    color: white;
-  }
-`
-
-export default ({children, ...props}) => {
-    return <Button className="m-10 p-8 rounded bg-teal-300 text-sm text-white hover:bg-teal-500" {...props}>{children}</Button>
-}
+export default ({ children, classes = {}, ...props }) => {
+  console.log(classes)
+  return (
+    <button
+      className={`button m-10 p-8 rounded bg-teal-300 text-sm text-white hover:bg-teal-500 ${classes.button && classes.button}`}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};

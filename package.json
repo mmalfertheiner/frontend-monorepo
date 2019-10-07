@@ -4,14 +4,20 @@
         "front-office": "yarn workspace front-office dev",
         "back-office": "yarn workspace back-office dev",
         "watch:ui": "yarn workspace ui watch",
+        "rm:node-modules": "concurrently --kill-others-on-fail \"rimraf node_modules\"  \"rimraf packages/ui/node_modules\" \"rimraf packages/front-office/node_modules\" \"rimraf packages/back-office/node_modules\"",
         "dev:front-office": "concurrently --kill-others-on-fail \"yarn front-office\"  \"yarn watch:ui\"",
         "dev:back-office": "concurrently --kill-others-on-fail \"yarn back-office\"  \"yarn watch:ui\""
     },
     "workspaces": {
-        "packages": ["packages/*"],
-        "nohoist": ["ui/@storybook"]
+        "packages": [
+            "packages/*"
+        ],
+        "nohoist": [
+            "ui/@storybook"
+        ]
     },
     "devDependencies": {
-        "concurrently": "^4.1.2"
+        "concurrently": "^4.1.2",
+        "rimraf": "^3.0.0"
     }
 }
