@@ -17,7 +17,7 @@ const Home = () => (
     <div className="hero">
       <h1 className="title">Welcome to Next.js!</h1>
       <Button>This is a</Button>
-      <Text>Test</Text>
+      <Text text="Test" className="text-xl" />
       <p className="description">
         To get started, edit <code>pages/index.js</code> and save to reload.
       </p>
