@@ -10,10 +10,10 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "dependencies": {},
+  "dependencies": {
+    "classnames": "^2.2.6"
+  },
   "peerDependencies": {
-    "@emotion/core": "~10.0.17",
-    "@emotion/styled": "~10.0.15",
     "react": "~16.10.1",
     "react-dom": "~16.10.1"
   },
@@ -22,9 +22,6 @@
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
-    "@emotion/babel-preset-css-prop": "^10.0.17",
-    "@emotion/core": "^10.0.17",
-    "@emotion/styled": "^10.0.17",
     "@storybook/addon-actions": "^5.2.1",
     "@storybook/addon-links": "^5.2.1",
     "@storybook/addons": "^5.2.1",

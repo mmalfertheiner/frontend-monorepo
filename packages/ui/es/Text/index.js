@@ -1,15 +1,10 @@
 import React from "react";
-import { css } from "@emotion/core";
+import classnames from 'classnames';
 export default (({
   text,
-  className = "",
-  css: cssProp
+  classes = {}
 }) => {
-  console.log(cssProp);
   return React.createElement("span", {
-    className: `text-red-700 ${className}`,
-    css: css`
-        background-color: #eee;
-      `
+    className: classnames("text-red-700", classes.text)
   }, text);
 });
