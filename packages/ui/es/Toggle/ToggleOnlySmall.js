@@ -1,11 +1,12 @@
 import React from "react";
+import classnames from "classnames";
 export default (({
   id,
   value: checked,
   onChange
 }) => {
   return React.createElement("div", {
-    class: "inline-block align-middle relative select-none w-6 mr-2 leading-normal"
+    className: "relative select-none w-6 leading-normal"
   }, React.createElement("input", {
     id: id,
     checked: checked,
@@ -16,6 +17,6 @@ export default (({
     className: classnames("block overflow-hidden cursor-pointer bg-white border rounded-full h-6", {
       "bg-green-300": checked
     }),
-    for: id
+    htmlFor: id
   }));
 });
