@@ -1,3 +1,4 @@
 import Button from './Button';
 import Text from './Text';
-export { Button, Text };
+import ToggleWithText from './Toggle/ToggleWithText';
+export { Button, Text, ToggleWithText };

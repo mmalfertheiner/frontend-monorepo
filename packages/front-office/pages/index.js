@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
-import { Button, Text } from "ui";
+import { Button, Text, ToggleWithText } from "ui";
 import css from "styled-jsx/css";
 import classnames from "classnames";
 
@@ -17,7 +17,10 @@ const styles = css.resolve`
 `;
 
 const Home = () => {
+  const [checked, setChecked] = useState(true);
+
   const scopedCss = styles.className;
+
   return (
     <div className="hero">
       <Head>
@@ -45,6 +48,15 @@ const Home = () => {
           <Text
             text="Custom text with hover class"
             classes={{ text: "hover:text-red-900 mx-2" }}
+          />
+        </section>
+        <section className="my-10">
+          <ToggleWithText
+            id="toggle-with-text"
+            value={checked}
+            onChange={event => setChecked(event.target.checked)}
+            checkedText="Toggle On"
+            unCheckedText="Toggle Off"
           />
         </section>
       </div>
