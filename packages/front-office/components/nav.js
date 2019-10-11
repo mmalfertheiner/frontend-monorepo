@@ -13,7 +13,7 @@ const Nav = () => (
   <nav>
     <ul>
       <li>
-        <Link href='/'>
+        <Link href='/' className="not-italic">
           <a>Home</a>
         </Link>
       </li>
