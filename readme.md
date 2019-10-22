@@ -33,3 +33,29 @@ They have a dependency on TailwindCSS and can influence the theme applied to the
 The PurgeCSS configuration will make sure that unnecessary styles created by Tailwind will be removed in production.
 
 ### UI package
+
+The UI package contains reusable React components, that are styled with TailwindCSS. It also supports the CSS-in-JS solution [styled-jsx](https://github.com/zeit/styled-jsx).
+
+Examples:
+
+This is an example of a button based on TailwindCSS only.
+
+```
+export default ({ children, classes = {}, ...props }) => {
+  return (
+    <button
+      className={classnames(
+        "button m-10 p-8 rounded bg-teal-300 text-sm text-white hover:bg-teal-500",
+        classes.button
+      )}
+      {...props}
+    >
+      {children}
+    </button>
+  );
+};
+```
+
+For a more complex UI component such as a toggle check out the [ToggleWithText](https://github.com/mmalfertheiner/frontend-monorepo/blob/master/packages/ui/src/Toggle/ToggleWithText.js) component.
+
+The UI package also includes a setup of storybook, which comes in handy for documentation,but also for development of new components. It can be started with `yarn storybook`.
